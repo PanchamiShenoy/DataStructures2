@@ -1,4 +1,4 @@
-package com.yml.dataStructures2.unorderedlist;
+package unorderedlist;
 
 import java.io.File;
 import java.io.FileNotFoundException;
