@@ -189,6 +189,39 @@ public class OrderedList {
 			System.out.print(e.getMessage());
 		}
 	}
+	/**
+	 * To get the size
+	 * @param <T>
+	 * @return
+	 */
+	public int getSize() {
+		int count = 0;
+		if(head == null) {
+			return 0;
+		}
+		else {
+
+			Node temp = head;
+			while(temp != null) {
+				count++;
+				temp = temp.next;
+
+			}
+		}
+		return count;
+	}
+
+	public int get(int index) {
+		Node temp = head;
+		Node prev = null;
+
+		for (int i = 0; i <= index; i++) {
+			prev = temp;
+			temp = temp.next;
+		}
+		return  prev.data;
+	}
+
 	public static void main(String[] args) throws FileNotFoundException {
 		Scanner r= new Scanner(System.in);
 		OrderedList o = new OrderedList();
